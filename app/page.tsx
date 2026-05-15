@@ -242,7 +242,7 @@ function Contact() {
             0176 84034915
           </a>
           <p className="font-medium text-brand-subtle text-[0.9375rem] mb-8">
-            Mo – Sa &nbsp;|&nbsp; 7:00 – 19:00 Uhr &nbsp;|&nbsp; Baden-Württemberg &amp; Umgebung
+            Mo – Sa &nbsp;|&nbsp; 7:00 – 19:00 Uhr &nbsp;|&nbsp; Stuttgart &amp; Umgebung
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <a
@@ -305,7 +305,7 @@ function Footer() {
           >
             0176 84034915
           </a>
-          <p className="text-brand-subtle text-[0.875rem]">Baden-Württemberg &amp; Umgebung</p>
+          <p className="text-brand-subtle text-[0.875rem]">Stuttgart &amp; Umgebung</p>
         </div>
 
         <div>

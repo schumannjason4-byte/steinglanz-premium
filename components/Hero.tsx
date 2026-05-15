@@ -12,7 +12,7 @@ export function Hero() {
           line2: "ÄSTHETIK",
           line3: "PERFEKTION",
         }}
-        subtitle="Professionelle Reinigung von Einfahrten, Terrassen & Balkonen in Baden-Württemberg & Umgebung."
+        subtitle="Professionelle Reinigung von Einfahrten, Terrassen & Balkonen in Stuttgart & Umgebung."
         buttons={{
           primary: { text: "Jetzt anrufen", href: "tel:017684034915" },
           secondary: { text: "Pakete ansehen", href: "#pakete" },
