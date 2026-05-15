@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { CheckCircle2, ChevronDown } from "lucide-react"
+import { ContactModal } from "./ContactModal"
 
 const packages = [
   {
@@ -10,6 +11,7 @@ const packages = [
     badge: "SAUBER & FRISCH",
     price: "4",
     priceUnit: "/m²",
+    modalOption: "Basisreinigung – ab 4 €/m²",
     features: [
       "Schonende Tiefenreinigung der Oberfläche",
       "Entfernung von Schmutz & Algen",
@@ -23,6 +25,7 @@ const packages = [
     badge: "GRÜNDLICH & NACHHALTIG",
     price: "8",
     priceUnit: "/m²",
+    modalOption: "Premiumreinigung – ab 8 €/m²",
     features: [
       "Gründliche Reinigung von Fläche & Fugen",
       "Entfernung von Unkraut & Ablagerungen",
@@ -36,6 +39,7 @@ const packages = [
     badge: "SCHUTZ & WERTERHALT",
     price: "12",
     priceUnit: "/m²",
+    modalOption: "Exklusivpaket – ab 12 €/m²",
     features: [
       "Kompletteinigung mit hochwertigem Schutz",
       "Schützt vor Feuchtigkeit & Witterung",
@@ -49,6 +53,7 @@ const packages = [
     badge: "DAUERHAFT & PERFEKT",
     price: "18–25",
     priceUnit: "/m²",
+    modalOption: "Premium Plus – ab 18 €/m²",
     features: [
       "Tiefenreinigung + vollst. Fugenentfernung",
       "Hochwertiger, langlebiger Fugenmörtel",
@@ -64,6 +69,13 @@ const CARD_CLASS = "reveal relative flex flex-col backdrop-blur-xl rounded-[18px
 
 export function PricingSection() {
   const [expanded, setExpanded] = useState(false)
+  const [modalOpen, setModalOpen] = useState(false)
+  const [selectedPkg, setSelectedPkg] = useState("")
+
+  const openModal = (option: string) => {
+    setSelectedPkg(option)
+    setModalOpen(true)
+  }
 
   return (
     <section id="pakete" className="relative py-14 lg:py-20 bg-brand-alt">
@@ -155,8 +167,8 @@ export function PricingSection() {
                   </button>
                 )}
 
-                <a
-                  href="tel:017684034915"
+                <button
+                  onClick={() => openModal(pkg.modalOption)}
                   className={`w-full flex justify-center font-body font-semibold text-[0.7rem] tracking-[0.08em] uppercase py-2 rounded-full border transition-all duration-250 ${
                     i === 1
                       ? "bg-gold text-brand border-gold hover:bg-gold-light hover:shadow-[0_8px_28px_rgba(201,162,39,0.25)] hover:-translate-y-0.5"
@@ -164,12 +176,18 @@ export function PricingSection() {
                   }`}
                 >
                   {i === 1 ? "Jetzt anfragen" : "Anfragen"}
-                </a>
+                </button>
               </article>
             )
           })}
         </div>
       </div>
+
+      <ContactModal
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+        selectedPackage={selectedPkg}
+      />
     </section>
   )
 }
