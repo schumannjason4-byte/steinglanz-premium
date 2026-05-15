@@ -65,7 +65,7 @@ function Services() {
 
   return (
     <section id="leistungen" className="relative py-20 lg:py-28 bg-brand">
-      <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{ background: "radial-gradient(ellipse 70% 55% at 85% 95%, rgba(231,255,0,0.04) 0%, transparent 65%), radial-gradient(ellipse 50% 40% at 15% 10%, rgba(231,255,0,0.02) 0%, transparent 60%)" }} />
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{ background: "radial-gradient(ellipse 70% 55% at 85% 95%, rgba(201,162,39,0.04) 0%, transparent 65%), radial-gradient(ellipse 50% 40% at 15% 10%, rgba(201,162,39,0.02) 0%, transparent 60%)" }} />
       <div className="relative max-w-[1280px] mx-auto px-5 md:px-8 lg:px-12">
         <header className="text-center mb-14 reveal">
           <span className="inline-block font-body text-sm font-bold tracking-[0.25em] uppercase text-gold mb-4">
@@ -138,7 +138,7 @@ function Trust() {
 
   return (
     <section className="relative py-20 lg:py-28 bg-brand">
-      <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{ background: "radial-gradient(ellipse 80% 60% at 50% 50%, rgba(231,255,0,0.03) 0%, transparent 70%)" }} />
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{ background: "radial-gradient(ellipse 80% 60% at 50% 50%, rgba(201,162,39,0.03) 0%, transparent 70%)" }} />
       <div className="relative max-w-[1280px] mx-auto px-5 md:px-8 lg:px-12">
         <header className="text-center mb-14 reveal">
           <span className="inline-block font-body text-sm font-bold tracking-[0.25em] uppercase text-gold mb-4">
@@ -153,7 +153,7 @@ function Trust() {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {features.map((f, i) => (
             <div key={f.title} className={`reveal reveal-d${i + 1} group flex flex-col gap-4`}>
-              <div className="w-14 h-14 rounded-full bg-gold/[0.08] border border-gold/[0.15] flex items-center justify-center text-gold group-hover:bg-gold/[0.14] group-hover:shadow-[0_0_20px_rgba(231,255,0,0.12)] transition-all duration-250 shrink-0">
+              <div className="w-14 h-14 rounded-full bg-gold/[0.08] border border-gold/[0.15] flex items-center justify-center text-gold group-hover:bg-gold/[0.14] group-hover:shadow-[0_0_20px_rgba(201,162,39,0.12)] transition-all duration-250 shrink-0">
                 {f.icon}
               </div>
               <h3 className="font-display text-[1.25rem] font-semibold text-brand-text leading-[1.3]">
@@ -172,7 +172,7 @@ function Trust() {
 function References() {
   return (
     <section id="referenzen" className="relative py-20 lg:py-28 bg-brand-alt">
-      <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{ background: "radial-gradient(ellipse 65% 50% at 75% 100%, rgba(231,255,0,0.03) 0%, transparent 65%), radial-gradient(ellipse 45% 35% at 25% 0%, rgba(231,255,0,0.02) 0%, transparent 55%)" }} />
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{ background: "radial-gradient(ellipse 65% 50% at 75% 100%, rgba(201,162,39,0.03) 0%, transparent 65%), radial-gradient(ellipse 45% 35% at 25% 0%, rgba(201,162,39,0.02) 0%, transparent 55%)" }} />
       <div className="relative max-w-[1280px] mx-auto px-5 md:px-8 lg:px-12">
         <header className="text-center mb-14 reveal">
           <span className="inline-block font-body text-sm font-bold tracking-[0.25em] uppercase text-gold mb-4">
@@ -222,7 +222,7 @@ function Contact() {
       id="kontakt"
       className="relative py-24 lg:py-32 bg-brand text-center"
     >
-      <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{ background: "radial-gradient(ellipse 80% 65% at 50% 50%, rgba(231,255,0,0.06) 0%, transparent 65%), radial-gradient(ellipse 50% 40% at 15% 80%, rgba(231,255,0,0.03) 0%, transparent 55%), radial-gradient(ellipse 50% 40% at 85% 20%, rgba(231,255,0,0.03) 0%, transparent 55%)" }} />
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{ background: "radial-gradient(ellipse 80% 65% at 50% 50%, rgba(201,162,39,0.06) 0%, transparent 65%), radial-gradient(ellipse 50% 40% at 15% 80%, rgba(201,162,39,0.03) 0%, transparent 55%), radial-gradient(ellipse 50% 40% at 85% 20%, rgba(201,162,39,0.03) 0%, transparent 55%)" }} />
 
       <div className="relative z-10 max-w-[1280px] mx-auto px-5 md:px-8 lg:px-12 reveal flex flex-col items-center">
         <p className="font-body text-xs font-bold tracking-[0.25em] uppercase text-gold mb-5">
@@ -235,7 +235,7 @@ function Contact() {
         <a
           href="tel:017684034915"
           aria-label="Anrufen: 0176 84034915"
-          className="font-display font-bold text-gold mb-5 hover:[text-shadow:0_0_50px_rgba(231,255,0,0.45)] transition-all duration-250 focus-visible:outline-2 focus-visible:outline-gold focus-visible:outline-offset-6 focus-visible:rounded"
+          className="font-display font-bold text-gold mb-5 hover:[text-shadow:0_0_50px_rgba(201,162,39,0.45)] transition-all duration-250 focus-visible:outline-2 focus-visible:outline-gold focus-visible:outline-offset-6 focus-visible:rounded"
           style={{ fontSize: "clamp(2.5rem, 8vw, 6rem)", letterSpacing: "-0.02em" }}
         >
           0176 84034915
@@ -246,7 +246,7 @@ function Contact() {
         <div className="flex flex-wrap gap-3 justify-center mb-8">
           <a
             href="tel:017684034915"
-            className="inline-flex items-center gap-2 bg-gold text-brand font-body font-bold text-[0.8125rem] tracking-[0.14em] uppercase px-8 py-4 rounded-full hover:bg-gold-light hover:shadow-[0_8px_28px_rgba(231,255,0,0.28)] hover:-translate-y-0.5 transition-all duration-250"
+            className="inline-flex items-center gap-2 bg-gold text-brand font-body font-bold text-[0.8125rem] tracking-[0.14em] uppercase px-8 py-4 rounded-full hover:bg-gold-light hover:shadow-[0_8px_28px_rgba(201,162,39,0.28)] hover:-translate-y-0.5 transition-all duration-250"
           >
             <Phone size={18} />
             Jetzt anrufen
@@ -275,7 +275,7 @@ function Contact() {
 function Footer() {
   return (
     <footer className="relative bg-[#050505] border-t border-gold/[0.12]" role="contentinfo">
-      <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{ background: "radial-gradient(ellipse 70% 50% at 50% 0%, rgba(231,255,0,0.03) 0%, transparent 60%)" }} />
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{ background: "radial-gradient(ellipse 70% 50% at 50% 0%, rgba(201,162,39,0.03) 0%, transparent 60%)" }} />
       <div className="relative max-w-[1280px] mx-auto px-5 md:px-8 lg:px-12 py-14 grid gap-12 md:grid-cols-2 lg:grid-cols-3">
         <div>
           <a
@@ -303,7 +303,7 @@ function Footer() {
           </p>
           <a
             href="tel:017684034915"
-            className="block font-display font-bold text-xl text-gold mb-1.5 hover:[text-shadow:0_0_20px_rgba(231,255,0,0.4)] transition-all duration-150"
+            className="block font-display font-bold text-xl text-gold mb-1.5 hover:[text-shadow:0_0_20px_rgba(201,162,39,0.4)] transition-all duration-150"
           >
             0176 84034915
           </a>

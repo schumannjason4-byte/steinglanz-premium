@@ -72,7 +72,7 @@ export function PricingSection() {
         aria-hidden="true"
         style={{
           background:
-            "radial-gradient(ellipse 60% 50% at 20% 5%, rgba(231,255,0,0.03) 0%, transparent 60%), radial-gradient(ellipse 50% 40% at 80% 100%, rgba(231,255,0,0.03) 0%, transparent 60%)",
+            "radial-gradient(ellipse 60% 50% at 20% 5%, rgba(201,162,39,0.03) 0%, transparent 60%), radial-gradient(ellipse 50% 40% at 80% 100%, rgba(201,162,39,0.03) 0%, transparent 60%)",
         }}
       />
       <div className="relative max-w-[1280px] mx-auto px-5 md:px-8 lg:px-12">
@@ -105,7 +105,7 @@ export function PricingSection() {
                   isFeatured
                     ? "bg-gradient-to-br from-gold/[0.06] via-brand to-brand border border-white/[0.08]"
                     : i === 1
-                    ? "bg-white/[0.04] border border-gold shadow-[0_0_0_1px_#e7ff00] hover:shadow-[0_0_0_1px_#f0ff4d,0_16px_40px_rgba(231,255,0,0.12)]"
+                    ? "bg-white/[0.04] border border-gold shadow-[0_0_0_1px_#C9A227] hover:shadow-[0_0_0_1px_#D4B24A,0_16px_40px_rgba(201,162,39,0.12)]"
                     : "bg-white/[0.04] border border-white/[0.08] hover:shadow-[0_16px_40px_rgba(0,0,0,0.35)]"
                 }`}
               >
@@ -159,7 +159,7 @@ export function PricingSection() {
                   href="tel:017684034915"
                   className={`w-full flex justify-center font-body font-semibold text-[0.7rem] tracking-[0.08em] uppercase py-2 rounded-full border transition-all duration-250 ${
                     i === 1
-                      ? "bg-gold text-brand border-gold hover:bg-gold-light hover:shadow-[0_8px_28px_rgba(231,255,0,0.25)] hover:-translate-y-0.5"
+                      ? "bg-gold text-brand border-gold hover:bg-gold-light hover:shadow-[0_8px_28px_rgba(201,162,39,0.25)] hover:-translate-y-0.5"
                       : "bg-transparent text-brand-muted border-white/[0.08] hover:text-gold hover:border-gold/40"
                   }`}
                 >

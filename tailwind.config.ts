@@ -14,8 +14,8 @@ const config: Config = {
       },
       colors: {
         gold: {
-          DEFAULT: "#e7ff00",
-          light: "#f0ff4d",
+          DEFAULT: "#C9A227",
+          light: "#D4B24A",
         },
         brand: {
           DEFAULT: "#0A0A0A",

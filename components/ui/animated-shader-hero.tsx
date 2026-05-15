@@ -17,7 +17,7 @@ interface HeroProps {
 
 function Btn({ config, variant }: { config: ButtonConfig; variant: 'primary' | 'secondary' }) {
   const cls = variant === 'primary'
-    ? 'inline-flex items-center gap-2 bg-gold text-brand font-body font-bold text-[0.8125rem] tracking-[0.14em] uppercase px-9 py-4 rounded-full hover:bg-gold-light hover:shadow-[0_0_32px_rgba(231,255,0,0.45)] hover:-translate-y-0.5 transition-all duration-250'
+    ? 'inline-flex items-center gap-2 bg-gold text-brand font-body font-bold text-[0.8125rem] tracking-[0.14em] uppercase px-9 py-4 rounded-full hover:bg-gold-light hover:shadow-[0_0_32px_rgba(201,162,39,0.45)] hover:-translate-y-0.5 transition-all duration-250'
     : 'inline-flex items-center gap-2 font-body font-semibold text-[0.8125rem] tracking-[0.14em] uppercase px-9 py-4 rounded-full border border-white/20 text-brand-text hover:border-gold/60 hover:text-gold backdrop-blur-sm transition-all duration-250'
   if (config.href) return <a href={config.href} className={cls}>{config.text}</a>
   return <button onClick={config.onClick} className={cls}>{config.text}</button>
@@ -42,7 +42,7 @@ export function AnimatedShaderHero({ trustBadge, eyebrow, headline, subtitle, bu
 
       <div
         className="absolute bottom-0 left-0 right-0 h-px pointer-events-none"
-        style={{ background: 'linear-gradient(to right, transparent, rgba(231,255,0,0.28), transparent)' }}
+        style={{ background: 'linear-gradient(to right, transparent, rgba(201,162,39,0.28), transparent)' }}
         aria-hidden="true"
       />
 
@@ -82,13 +82,13 @@ export function AnimatedShaderHero({ trustBadge, eyebrow, headline, subtitle, bu
               >{headline.line3}</span>
               {/* Sparkles */}
               <svg className="hero-sparkle hero-sparkle-1" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 2L13.5 10.5L22 12L13.5 13.5L12 22L10.5 13.5L2 12L10.5 10.5Z" fill="#e7ff00"/>
+                <path d="M12 2L13.5 10.5L22 12L13.5 13.5L12 22L10.5 13.5L2 12L10.5 10.5Z" fill="#C9A227"/>
               </svg>
               <svg className="hero-sparkle hero-sparkle-2" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 2L13.5 10.5L22 12L13.5 13.5L12 22L10.5 13.5L2 12L10.5 10.5Z" fill="#e7ff00"/>
+                <path d="M12 2L13.5 10.5L22 12L13.5 13.5L12 22L10.5 13.5L2 12L10.5 10.5Z" fill="#C9A227"/>
               </svg>
               <svg className="hero-sparkle hero-sparkle-3" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 2L13.5 10.5L22 12L13.5 13.5L12 22L10.5 13.5L2 12L10.5 10.5Z" fill="#e7ff00"/>
+                <path d="M12 2L13.5 10.5L22 12L13.5 13.5L12 22L10.5 13.5L2 12L10.5 10.5Z" fill="#C9A227"/>
               </svg>
             </span>
           )}
