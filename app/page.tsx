@@ -65,7 +65,7 @@ function Services() {
 
   return (
     <section id="leistungen" className="relative py-20 lg:py-28 bg-brand">
-      <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{ background: "radial-gradient(ellipse 70% 55% at 85% 95%, rgba(201,162,39,0.04) 0%, transparent 65%), radial-gradient(ellipse 50% 40% at 15% 10%, rgba(201,162,39,0.02) 0%, transparent 60%)" }} />
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{ background: "radial-gradient(ellipse 90% 65% at 50% 50%, rgba(201,162,39,0.09) 0%, transparent 65%), radial-gradient(ellipse 60% 50% at 85% 95%, rgba(201,162,39,0.12) 0%, transparent 60%), radial-gradient(ellipse 50% 40% at 15% 10%, rgba(201,162,39,0.07) 0%, transparent 55%)" }} />
       <div className="relative max-w-[1280px] mx-auto px-5 md:px-8 lg:px-12">
         <header className="text-center mb-14 reveal">
           <span className="inline-block font-body text-sm font-bold tracking-[0.25em] uppercase text-gold mb-4">
@@ -138,7 +138,7 @@ function Trust() {
 
   return (
     <section className="relative py-20 lg:py-28 bg-brand">
-      <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{ background: "radial-gradient(ellipse 80% 60% at 50% 50%, rgba(201,162,39,0.03) 0%, transparent 70%)" }} />
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{ background: "radial-gradient(ellipse 90% 70% at 50% 50%, rgba(201,162,39,0.11) 0%, transparent 70%), radial-gradient(ellipse 40% 40% at 10% 90%, rgba(201,162,39,0.07) 0%, transparent 55%), radial-gradient(ellipse 40% 40% at 90% 10%, rgba(201,162,39,0.07) 0%, transparent 55%)" }} />
       <div className="relative max-w-[1280px] mx-auto px-5 md:px-8 lg:px-12">
         <header className="text-center mb-14 reveal">
           <span className="inline-block font-body text-sm font-bold tracking-[0.25em] uppercase text-gold mb-4">
@@ -172,7 +172,7 @@ function Trust() {
 function References() {
   return (
     <section id="referenzen" className="relative py-20 lg:py-28 bg-brand-alt">
-      <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{ background: "radial-gradient(ellipse 65% 50% at 75% 100%, rgba(201,162,39,0.03) 0%, transparent 65%), radial-gradient(ellipse 45% 35% at 25% 0%, rgba(201,162,39,0.02) 0%, transparent 55%)" }} />
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{ background: "radial-gradient(ellipse 70% 55% at 75% 100%, rgba(201,162,39,0.10) 0%, transparent 60%), radial-gradient(ellipse 55% 45% at 25% 0%, rgba(201,162,39,0.08) 0%, transparent 55%), radial-gradient(ellipse 60% 50% at 50% 50%, rgba(201,162,39,0.06) 0%, transparent 70%)" }} />
       <div className="relative max-w-[1280px] mx-auto px-5 md:px-8 lg:px-12">
         <header className="text-center mb-14 reveal">
           <span className="inline-block font-body text-sm font-bold tracking-[0.25em] uppercase text-gold mb-4">
@@ -216,56 +216,97 @@ function References() {
 }
 
 /* ── CONTACT ─────────────────────────────────────────────── */
+const inputCls = "w-full bg-[#0C0907] border border-white/[0.10] text-brand-text placeholder:text-brand-subtle px-5 py-4 rounded-xl font-body text-[0.9375rem] transition-all duration-200 focus:outline-none focus:border-gold/60 focus:ring-4 focus:ring-gold/[0.10]"
+
 function Contact() {
   return (
     <section
       id="kontakt"
-      className="relative py-24 lg:py-32 bg-brand text-center"
+      className="relative py-24 lg:py-32 bg-brand"
     >
-      <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{ background: "radial-gradient(ellipse 80% 65% at 50% 50%, rgba(201,162,39,0.06) 0%, transparent 65%), radial-gradient(ellipse 50% 40% at 15% 80%, rgba(201,162,39,0.03) 0%, transparent 55%), radial-gradient(ellipse 50% 40% at 85% 20%, rgba(201,162,39,0.03) 0%, transparent 55%)" }} />
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{ background: "radial-gradient(ellipse 85% 70% at 50% 50%, rgba(201,162,39,0.14) 0%, transparent 60%), radial-gradient(ellipse 55% 45% at 15% 80%, rgba(201,162,39,0.09) 0%, transparent 55%), radial-gradient(ellipse 55% 45% at 85% 20%, rgba(201,162,39,0.09) 0%, transparent 55%)" }} />
 
-      <div className="relative z-10 max-w-[1280px] mx-auto px-5 md:px-8 lg:px-12 reveal flex flex-col items-center">
-        <p className="font-body text-xs font-bold tracking-[0.25em] uppercase text-gold mb-5">
-          Kostenlose Beratung
-        </p>
-        <h2 className="font-display font-bold text-brand-text leading-[1.15] mb-8"
-          style={{ fontSize: "clamp(2.25rem, 5vw, 3.75rem)" }}>
-          Bereit für ein sauberes Ergebnis?
-        </h2>
-        <a
-          href="tel:017684034915"
-          aria-label="Anrufen: 0176 84034915"
-          className="font-display font-bold text-gold mb-5 hover:[text-shadow:0_0_50px_rgba(201,162,39,0.45)] transition-all duration-250 focus-visible:outline-2 focus-visible:outline-gold focus-visible:outline-offset-6 focus-visible:rounded"
-          style={{ fontSize: "clamp(2.5rem, 8vw, 6rem)", letterSpacing: "-0.02em" }}
-        >
-          0176 84034915
-        </a>
-        <p className="font-medium text-brand-subtle text-[0.9375rem] mb-10">
-          Mo – Sa &nbsp;|&nbsp; 7:00 – 19:00 Uhr &nbsp;|&nbsp; Baden-Württemberg &amp; Umgebung
-        </p>
-        <div className="flex flex-wrap gap-3 justify-center mb-8">
+      <div className="relative z-10 max-w-[1280px] mx-auto px-5 md:px-8 lg:px-12">
+        {/* Header */}
+        <div className="reveal flex flex-col items-center text-center mb-14">
+          <p className="font-body text-xs font-bold tracking-[0.25em] uppercase text-gold mb-5">
+            Kostenlose Beratung
+          </p>
+          <h2 className="font-display font-bold text-brand-text leading-[1.15] mb-6"
+            style={{ fontSize: "clamp(2.25rem, 5vw, 3.75rem)" }}>
+            Bereit für ein sauberes Ergebnis?
+          </h2>
           <a
             href="tel:017684034915"
-            className="inline-flex items-center gap-2 bg-gold text-brand font-body font-bold text-[0.8125rem] tracking-[0.14em] uppercase px-8 py-4 rounded-full hover:bg-gold-light hover:shadow-[0_8px_28px_rgba(201,162,39,0.28)] hover:-translate-y-0.5 transition-all duration-250"
+            aria-label="Anrufen: 0176 84034915"
+            className="font-display font-bold text-gold mb-4 hover:[text-shadow:0_0_50px_rgba(201,162,39,0.45)] transition-all duration-250"
+            style={{ fontSize: "clamp(2rem, 6vw, 4.5rem)", letterSpacing: "-0.02em" }}
           >
-            <Phone size={18} />
-            Jetzt anrufen
+            0176 84034915
           </a>
-          <a
-            href="https://wa.me/4917684034915"
-            rel="noopener noreferrer"
-            target="_blank"
-            aria-label="WhatsApp öffnen (neues Fenster)"
-            className="inline-flex items-center gap-2 font-body font-semibold text-[0.8125rem] tracking-[0.08em] uppercase px-8 py-4 rounded-full border border-white/10 text-brand-text hover:border-gold/50 hover:text-gold transition-all duration-250"
-          >
-            <MessageCircle size={18} />
-            WhatsApp
-          </a>
+          <p className="font-medium text-brand-subtle text-[0.9375rem] mb-8">
+            Mo – Sa &nbsp;|&nbsp; 7:00 – 19:00 Uhr &nbsp;|&nbsp; Baden-Württemberg &amp; Umgebung
+          </p>
+          <div className="flex flex-wrap gap-3 justify-center">
+            <a
+              href="tel:017684034915"
+              className="inline-flex items-center gap-2 bg-gold text-brand font-body font-bold text-[0.8125rem] tracking-[0.14em] uppercase px-8 py-4 rounded-full hover:bg-gold-light hover:shadow-[0_8px_28px_rgba(201,162,39,0.28)] hover:-translate-y-0.5 transition-all duration-250"
+            >
+              <Phone size={18} />
+              Jetzt anrufen
+            </a>
+            <a
+              href="https://wa.me/4917684034915"
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-label="WhatsApp öffnen (neues Fenster)"
+              className="inline-flex items-center gap-2 font-body font-semibold text-[0.8125rem] tracking-[0.08em] uppercase px-8 py-4 rounded-full border border-white/10 text-brand-text hover:border-gold/50 hover:text-gold transition-all duration-250"
+            >
+              <MessageCircle size={18} />
+              WhatsApp
+            </a>
+          </div>
         </div>
-        <p className="flex items-center gap-1.5 text-brand-subtle text-sm">
-          <MapPin size={14} />
-          Einsatzgebiet: Baden-Württemberg &amp; Umgebung
-        </p>
+
+        {/* Form card */}
+        <div className="reveal max-w-[640px] mx-auto bg-white/[0.04] backdrop-blur-xl border border-white/[0.08] rounded-[20px] p-8 md:p-12">
+          <span className="inline-block font-body text-[0.6875rem] font-bold tracking-[0.2em] uppercase text-gold border border-gold/40 px-4 py-1.5 rounded-full mb-5">
+            Kostenlose Anfrage
+          </span>
+          <h3 className="font-display font-bold text-brand-text text-[1.625rem] leading-[1.2] mb-3">
+            Stellen Sie jetzt Ihre Anfrage
+          </h3>
+          <p className="font-medium text-brand-muted text-[0.9375rem] leading-relaxed mb-8">
+            Wir melden uns innerhalb von 24 Stunden mit einem unverbindlichen Angebot.
+          </p>
+
+          <form action="mailto:schumannjason6@gmail.com" method="POST" encType="text/plain" className="flex flex-col gap-3.5">
+            <div className="grid grid-cols-2 gap-3.5">
+              <input name="vorname" placeholder="Vorname" required className={inputCls} />
+              <input name="nachname" placeholder="Nachname" required className={inputCls} />
+            </div>
+            <input name="kontakt" placeholder="Telefon oder E-Mail" required className={inputCls} />
+            <select name="paket" required defaultValue="" className={`${inputCls} appearance-none`}
+              style={{ backgroundImage: "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='8' viewBox='0 0 14 8'><path d='M1 1l6 6 6-6' stroke='%23909090' stroke-width='1.5' fill='none' stroke-linecap='round'/></svg>\")", backgroundRepeat: "no-repeat", backgroundPosition: "right 18px center", paddingRight: "46px" }}>
+              <option value="" disabled>Paket auswählen…</option>
+              <option>Basisreinigung – ab 4 €/m²</option>
+              <option>Premiumreinigung – ab 8 €/m²</option>
+              <option>Exklusivpaket – ab 12 €/m²</option>
+              <option>Premium Plus – ab 18 €/m²</option>
+            </select>
+            <input name="flaeche" type="number" min="1" placeholder="Fläche in m² (ca.)" className={inputCls} />
+            <textarea name="nachricht" placeholder="Kurze Beschreibung des Auftrags…" rows={4} className={`${inputCls} resize-y`} />
+            <button
+              type="submit"
+              className="mt-2 w-full bg-gold text-brand font-body font-bold text-[0.875rem] tracking-[0.10em] uppercase py-4 rounded-full hover:bg-gold-light hover:shadow-[0_8px_28px_rgba(201,162,39,0.30)] hover:-translate-y-0.5 transition-all duration-250"
+            >
+              Jetzt unverbindlich anfragen →
+            </button>
+            <p className="text-center text-brand-subtle text-[0.75rem]">
+              Mit dem Absenden stimmen Sie unserer Datenschutzerklärung zu.
+            </p>
+          </form>
+        </div>
       </div>
     </section>
   )
@@ -275,7 +316,7 @@ function Contact() {
 function Footer() {
   return (
     <footer className="relative bg-[#050505] border-t border-gold/[0.12]" role="contentinfo">
-      <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{ background: "radial-gradient(ellipse 70% 50% at 50% 0%, rgba(201,162,39,0.03) 0%, transparent 60%)" }} />
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{ background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(201,162,39,0.10) 0%, transparent 60%), radial-gradient(ellipse 60% 50% at 50% 100%, rgba(201,162,39,0.06) 0%, transparent 55%)" }} />
       <div className="relative max-w-[1280px] mx-auto px-5 md:px-8 lg:px-12 py-14 grid gap-12 md:grid-cols-2 lg:grid-cols-3">
         <div>
           <a

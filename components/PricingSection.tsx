@@ -72,7 +72,7 @@ export function PricingSection() {
         aria-hidden="true"
         style={{
           background:
-            "radial-gradient(ellipse 60% 50% at 20% 5%, rgba(201,162,39,0.03) 0%, transparent 60%), radial-gradient(ellipse 50% 40% at 80% 100%, rgba(201,162,39,0.03) 0%, transparent 60%)",
+            "radial-gradient(ellipse 80% 65% at 50% 50%, rgba(201,162,39,0.10) 0%, transparent 65%), radial-gradient(ellipse 60% 50% at 20% 5%, rgba(201,162,39,0.09) 0%, transparent 55%), radial-gradient(ellipse 55% 45% at 80% 100%, rgba(201,162,39,0.09) 0%, transparent 55%)",
         }}
       />
       <div className="relative max-w-[1280px] mx-auto px-5 md:px-8 lg:px-12">

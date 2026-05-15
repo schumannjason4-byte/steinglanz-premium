@@ -28,14 +28,14 @@ export function AnimatedShaderHero({ trustBadge, eyebrow, headline, subtitle, bu
     <div className={`relative w-full min-h-dvh overflow-hidden ${className}`}>
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url("/images/hero-bg.jpg")', filter: 'brightness(1.05)' }}
+        style={{ backgroundImage: 'url("/images/hero-bg.jpg")', filter: 'brightness(1.5)' }}
         aria-hidden="true"
       />
 
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'linear-gradient(to bottom, rgba(4,4,4,0.62) 0%, rgba(4,4,4,0.28) 30%, rgba(4,4,4,0.32) 60%, rgba(4,4,4,0.88) 82%, rgba(4,4,4,0.97) 100%)'
+          background: 'linear-gradient(to bottom, rgba(4,4,4,0.38) 0%, rgba(4,4,4,0.05) 30%, rgba(4,4,4,0.08) 60%, rgba(4,4,4,0.78) 82%, rgba(4,4,4,0.93) 100%)'
         }}
         aria-hidden="true"
       />
