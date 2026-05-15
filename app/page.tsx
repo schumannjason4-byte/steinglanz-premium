@@ -233,23 +233,15 @@ function Contact() {
             style={{ fontSize: "clamp(2.25rem, 5vw, 3.75rem)" }}>
             Bereit für ein sauberes Ergebnis?
           </h2>
-          <a
-            href="tel:017684034915"
-            aria-label="Anrufen: 0176 84034915"
-            className="font-display font-bold text-gold mb-4 hover:[text-shadow:0_0_50px_rgba(201,162,39,0.45)] transition-all duration-250"
-            style={{ fontSize: "clamp(2rem, 6vw, 4.5rem)", letterSpacing: "-0.02em" }}
-          >
-            0176 84034915
-          </a>
-          <p className="font-medium text-brand-subtle text-[0.9375rem] mb-8">
+          <p className="font-medium text-brand-subtle text-[0.9375rem] mb-10">
             Mo – Sa &nbsp;|&nbsp; 7:00 – 19:00 Uhr &nbsp;|&nbsp; Stuttgart &amp; Umgebung
           </p>
-          <div className="flex flex-wrap gap-3 justify-center">
+          <div className="flex flex-wrap gap-4 justify-center">
             <a
               href="tel:017684034915"
-              className="inline-flex items-center gap-2 bg-gold text-brand font-body font-bold text-[0.8125rem] tracking-[0.14em] uppercase px-8 py-4 rounded-full hover:bg-gold-light hover:shadow-[0_8px_28px_rgba(201,162,39,0.28)] hover:-translate-y-0.5 transition-all duration-250"
+              className="inline-flex items-center gap-3 bg-gold text-brand font-body font-bold text-[1rem] tracking-[0.14em] uppercase px-12 py-5 rounded-full hover:bg-gold-light hover:shadow-[0_8px_28px_rgba(201,162,39,0.28)] hover:-translate-y-0.5 transition-all duration-250"
             >
-              <Phone size={18} />
+              <Phone size={22} />
               Jetzt anrufen
             </a>
             <a
@@ -257,9 +249,9 @@ function Contact() {
               rel="noopener noreferrer"
               target="_blank"
               aria-label="WhatsApp öffnen (neues Fenster)"
-              className="inline-flex items-center gap-2 font-body font-semibold text-[0.8125rem] tracking-[0.08em] uppercase px-8 py-4 rounded-full border border-white/10 text-brand-text hover:border-gold/50 hover:text-gold transition-all duration-250"
+              className="inline-flex items-center gap-3 font-body font-semibold text-[1rem] tracking-[0.08em] uppercase px-12 py-5 rounded-full border border-white/10 text-brand-text hover:border-gold/50 hover:text-gold transition-all duration-250"
             >
-              <MessageCircle size={18} />
+              <MessageCircle size={22} />
               WhatsApp
             </a>
           </div>
