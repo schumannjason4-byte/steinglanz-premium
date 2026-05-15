@@ -55,7 +55,7 @@ export function ContactModal({ isOpen, onClose, selectedPackage }: Props) {
           Wir melden uns innerhalb von 24 Stunden mit einem unverbindlichen Angebot.
         </p>
 
-        <form key={selectedPackage} action="mailto:schumannjason6@gmail.com" method="POST" encType="text/plain" className="flex flex-col gap-3.5">
+        <form key={selectedPackage} action="https://formspree.io/f/meenykrv" method="POST" className="flex flex-col gap-3.5">
           <div className="grid grid-cols-2 gap-3.5">
             <input name="vorname" placeholder="Vorname" required className={inputCls} />
             <input name="nachname" placeholder="Nachname" required className={inputCls} />
