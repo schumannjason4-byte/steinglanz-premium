@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy
 
 on:
   push:
@@ -14,7 +14,30 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  deploy-hostinger:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm run build
+
+      - name: Upload to Hostinger via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./out/
+          server-dir: public_html/
+
+  deploy-ghpages:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -30,6 +53,8 @@ jobs:
       - run: npm ci
 
       - run: npm run build
+        env:
+          BASE_PATH: /steinglanz-premium
 
       - uses: actions/configure-pages@v5
 
