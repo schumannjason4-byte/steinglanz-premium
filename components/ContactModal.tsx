@@ -1,7 +1,7 @@
 "use client"
 
-import { useEffect } from "react"
-import { X } from "lucide-react"
+import { useEffect, useRef, useState } from "react"
+import { X, ImagePlus, Trash2 } from "lucide-react"
 
 const inputCls = "w-full bg-white border border-gold/[0.25] text-brand-text placeholder:text-brand-subtle px-5 py-4 rounded-xl font-body text-[0.9375rem] transition-all duration-200 focus:outline-none focus:border-gold focus:ring-4 focus:ring-gold/[0.12]"
 
@@ -19,6 +19,10 @@ interface Props {
 }
 
 export function ContactModal({ isOpen, onClose, selectedPackage }: Props) {
+  const [files, setFiles] = useState<File[]>([])
+  const [dragging, setDragging] = useState(false)
+  const fileRef = useRef<HTMLInputElement>(null)
+
   useEffect(() => {
     if (!isOpen) return
     document.body.style.overflow = "hidden"
@@ -30,7 +34,22 @@ export function ContactModal({ isOpen, onClose, selectedPackage }: Props) {
     }
   }, [isOpen, onClose])
 
+  useEffect(() => {
+    if (!isOpen) setFiles([])
+  }, [isOpen])
+
   if (!isOpen) return null
+
+  const addFiles = (incoming: FileList | null) => {
+    if (!incoming) return
+    const imgs = Array.from(incoming).filter(f => f.type.startsWith("image/"))
+    setFiles(prev => {
+      const combined = [...prev, ...imgs]
+      return combined.slice(0, 5)
+    })
+  }
+
+  const removeFile = (i: number) => setFiles(prev => prev.filter((_, idx) => idx !== i))
 
   return (
     <div className="fixed inset-0 z-[200] flex items-center justify-center p-4" role="dialog" aria-modal="true">
@@ -55,7 +74,7 @@ export function ContactModal({ isOpen, onClose, selectedPackage }: Props) {
           Wir melden uns innerhalb von 24 Stunden mit einem unverbindlichen Angebot.
         </p>
 
-        <form key={selectedPackage} action="https://formspree.io/f/meenykrv" method="POST" className="flex flex-col gap-3.5">
+        <form key={selectedPackage} action="https://formspree.io/f/meenykrv" method="POST" encType="multipart/form-data" className="flex flex-col gap-3.5">
           <div className="grid grid-cols-2 gap-3.5">
             <input name="vorname" placeholder="Vorname" required className={inputCls} />
             <input name="nachname" placeholder="Nachname" required className={inputCls} />
@@ -80,6 +99,58 @@ export function ContactModal({ isOpen, onClose, selectedPackage }: Props) {
           </select>
           <input name="flaeche" type="number" min="1" placeholder="Fläche in m² (ca.)" className={inputCls} />
           <textarea name="nachricht" placeholder="Kurze Beschreibung des Auftrags…" rows={4} className={`${inputCls} resize-y`} />
+
+          {/* File upload */}
+          <div>
+            <input
+              ref={fileRef}
+              type="file"
+              name="bilder"
+              accept="image/*"
+              multiple
+              className="sr-only"
+              onChange={e => addFiles(e.target.files)}
+            />
+            <button
+              type="button"
+              onClick={() => fileRef.current?.click()}
+              onDragOver={e => { e.preventDefault(); setDragging(true) }}
+              onDragLeave={() => setDragging(false)}
+              onDrop={e => { e.preventDefault(); setDragging(false); addFiles(e.dataTransfer.files) }}
+              className={`w-full flex flex-col items-center justify-center gap-2 border-2 border-dashed rounded-xl py-6 px-4 transition-all duration-200 cursor-pointer ${
+                dragging
+                  ? "border-gold bg-gold/[0.08]"
+                  : "border-gold/[0.30] bg-white hover:border-gold hover:bg-gold/[0.04]"
+              }`}
+            >
+              <ImagePlus size={24} className="text-gold" />
+              <span className="font-body text-[0.875rem] font-semibold text-brand-muted">
+                Fotos hinzufügen
+              </span>
+              <span className="font-body text-[0.75rem] text-brand-subtle">
+                Klicken oder Bilder hierher ziehen · max. 5 Bilder
+              </span>
+            </button>
+
+            {files.length > 0 && (
+              <ul className="mt-2.5 flex flex-col gap-1.5">
+                {files.map((f, i) => (
+                  <li key={i} className="flex items-center justify-between gap-3 bg-white border border-gold/[0.20] rounded-xl px-4 py-2.5">
+                    <span className="font-body text-[0.8125rem] text-brand-muted truncate">{f.name}</span>
+                    <button
+                      type="button"
+                      onClick={() => removeFile(i)}
+                      className="shrink-0 text-brand-subtle hover:text-red-400 transition-colors duration-150"
+                      aria-label="Bild entfernen"
+                    >
+                      <Trash2 size={14} />
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+
           <button
             type="submit"
             className="mt-2 w-full bg-gold text-brand font-body font-bold text-[0.875rem] tracking-[0.10em] uppercase py-4 rounded-full hover:bg-gold-light hover:shadow-[0_8px_28px_rgba(201,162,39,0.30)] hover:-translate-y-0.5 transition-all duration-250"
