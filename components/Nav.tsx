@@ -47,7 +47,6 @@ export function Nav() {
       aria-label="Hauptnavigation"
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-250",
-        scrolled && "bg-[#F8F3EA]/95 backdrop-blur-xl border-b border-gold/[0.20]",
         hidden && "-translate-y-full"
       )}
     >
