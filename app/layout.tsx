@@ -20,7 +20,7 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: "STEINGLANZ PREMIUM – Professionelle Außenflächenreinigung Stuttgart",
   description:
-    "STEINGLANZ PREMIUM – Professionelle Reinigung von Einfahrten, Terrassen und Balkonen in Stuttgart. Ab 4€/m². Jetzt anfragen: 0176 84034915",
+    "STEINGLANZ PREMIUM – Professionelle Reinigung von Einfahrten, Terrassen und Balkonen in Stuttgart. Ab 4€/m². Jetzt anfragen: 0163 8014181",
   openGraph: {
     title: "STEINGLANZ PREMIUM – Außenflächenreinigung",
     description:

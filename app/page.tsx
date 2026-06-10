@@ -238,14 +238,14 @@ function Contact() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a
-              href="tel:017684034915"
+              href="tel:01638014181"
               className="inline-flex items-center gap-3 bg-gold text-brand font-body font-bold text-[1rem] tracking-[0.14em] uppercase px-12 py-5 rounded-full hover:bg-gold-light hover:shadow-[0_8px_28px_rgba(201,162,39,0.28)] hover:-translate-y-0.5 transition-all duration-250"
             >
               <Phone size={22} />
               Jetzt anrufen
             </a>
             <a
-              href="https://wa.me/4917684034915"
+              href="https://wa.me/491638014181"
               rel="noopener noreferrer"
               target="_blank"
               aria-label="WhatsApp öffnen (neues Fenster)"
@@ -292,10 +292,10 @@ function Footer() {
             Kontakt
           </p>
           <a
-            href="tel:017684034915"
+            href="tel:01638014181"
             className="block font-display font-bold text-xl text-gold mb-1.5 hover:[text-shadow:0_0_20px_rgba(201,162,39,0.4)] transition-all duration-150"
           >
-            0176 84034915
+            0163 8014181
           </a>
           <p className="text-brand-subtle text-[0.875rem]">Stuttgart &amp; Umgebung</p>
         </div>

@@ -93,12 +93,12 @@ export function Nav() {
 
         {/* Desktop CTA */}
         <a
-          href="tel:017684034915"
+          href="tel:01638014181"
           className="hidden lg:flex items-center gap-2 text-gold border border-gold/30 hover:bg-gold hover:text-brand hover:border-gold px-4 py-2 rounded-full text-[0.8125rem] font-semibold tracking-wide transition-all duration-250 shrink-0"
-          aria-label="Jetzt anrufen: 0176 84034915"
+          aria-label="Jetzt anrufen: 0163 8014181"
         >
           <Phone size={15} />
-          0176 84034915
+          0163 8014181
         </a>
 
         {/* Hamburger */}
@@ -158,12 +158,12 @@ export function Nav() {
           ))}
         </ul>
         <a
-          href="tel:017684034915"
+          href="tel:01638014181"
           className="flex items-center justify-center gap-2 mx-5 mb-5 mt-4 bg-gold text-brand font-semibold text-sm tracking-widest uppercase rounded-full py-3.5 hover:bg-gold-light transition-colors duration-250"
           onClick={close}
         >
           <Phone size={16} />
-          0176 84034915
+          0163 8014181
         </a>
       </div>
     </nav>

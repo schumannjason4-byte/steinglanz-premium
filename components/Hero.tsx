@@ -14,7 +14,7 @@ export function Hero() {
         }}
         subtitle="Professionelle Reinigung von Einfahrten, Terrassen & Balkonen in Stuttgart & Umgebung."
         buttons={{
-          primary: { text: "Jetzt anrufen", href: "tel:017684034915" },
+          primary: { text: "Jetzt anrufen", href: "tel:01638014181" },
           secondary: { text: "Pakete ansehen", href: "#pakete" },
         }}
       />
