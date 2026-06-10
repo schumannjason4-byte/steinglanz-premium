@@ -65,7 +65,7 @@ function Services() {
 
   return (
     <section id="leistungen" className="relative py-20 lg:py-28 bg-brand">
-      <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{ background: "radial-gradient(ellipse 90% 65% at 50% 50%, rgba(201,162,39,0.09) 0%, transparent 65%), radial-gradient(ellipse 60% 50% at 85% 95%, rgba(201,162,39,0.12) 0%, transparent 60%), radial-gradient(ellipse 50% 40% at 15% 10%, rgba(201,162,39,0.07) 0%, transparent 55%)" }} />
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{ background: "radial-gradient(ellipse 80% 60% at 85% 95%, rgba(201,162,39,0.08) 0%, transparent 60%), radial-gradient(ellipse 50% 40% at 15% 10%, rgba(201,162,39,0.05) 0%, transparent 55%)" }} />
       <div className="relative max-w-[1280px] mx-auto px-5 md:px-8 lg:px-12">
         <header className="text-center mb-14 reveal">
           <span className="inline-block font-body text-sm font-bold tracking-[0.25em] uppercase text-gold mb-4">
@@ -84,7 +84,7 @@ function Services() {
           {services.map((s, i) => (
             <article
               key={s.title}
-              className={`reveal reveal-d${i + 1} group relative bg-white/[0.04] backdrop-blur-xl border border-white/[0.08] rounded-[28px] p-10 overflow-hidden transition-all duration-250 hover:-translate-y-1.5 hover:border-gold/20 hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)] ${s.offset ? "lg:mt-10" : ""}`}
+              className={`reveal reveal-d${i + 1} group relative bg-white border border-gold/[0.20] rounded-[28px] p-10 overflow-hidden transition-all duration-250 hover:-translate-y-1.5 hover:border-gold/50 hover:shadow-[0_12px_40px_rgba(201,162,39,0.12)] ${s.offset ? "lg:mt-10" : ""}`}
             >
               {/* Neon shimmer on hover */}
               <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-250" />
@@ -138,7 +138,7 @@ function Trust() {
 
   return (
     <section className="relative py-20 lg:py-28 bg-brand">
-      <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{ background: "radial-gradient(ellipse 90% 70% at 50% 50%, rgba(201,162,39,0.11) 0%, transparent 70%), radial-gradient(ellipse 40% 40% at 10% 90%, rgba(201,162,39,0.07) 0%, transparent 55%), radial-gradient(ellipse 40% 40% at 90% 10%, rgba(201,162,39,0.07) 0%, transparent 55%)" }} />
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{ background: "radial-gradient(ellipse 80% 60% at 50% 50%, rgba(201,162,39,0.07) 0%, transparent 70%)" }} />
       <div className="relative max-w-[1280px] mx-auto px-5 md:px-8 lg:px-12">
         <header className="text-center mb-14 reveal">
           <span className="inline-block font-body text-sm font-bold tracking-[0.25em] uppercase text-gold mb-4">
@@ -172,7 +172,7 @@ function Trust() {
 function References() {
   return (
     <section id="referenzen" className="relative py-20 lg:py-28 bg-brand-alt">
-      <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{ background: "radial-gradient(ellipse 70% 55% at 75% 100%, rgba(201,162,39,0.10) 0%, transparent 60%), radial-gradient(ellipse 55% 45% at 25% 0%, rgba(201,162,39,0.08) 0%, transparent 55%), radial-gradient(ellipse 60% 50% at 50% 50%, rgba(201,162,39,0.06) 0%, transparent 70%)" }} />
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{ background: "radial-gradient(ellipse 60% 50% at 75% 100%, rgba(201,162,39,0.07) 0%, transparent 60%), radial-gradient(ellipse 50% 40% at 25% 0%, rgba(201,162,39,0.05) 0%, transparent 55%)" }} />
       <div className="relative max-w-[1280px] mx-auto px-5 md:px-8 lg:px-12">
         <header className="text-center mb-14 reveal">
           <span className="inline-block font-body text-sm font-bold tracking-[0.25em] uppercase text-gold mb-4">
@@ -222,7 +222,7 @@ function Contact() {
       id="kontakt"
       className="relative py-24 lg:py-32 bg-brand"
     >
-      <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{ background: "radial-gradient(ellipse 85% 70% at 50% 50%, rgba(201,162,39,0.14) 0%, transparent 60%), radial-gradient(ellipse 55% 45% at 15% 80%, rgba(201,162,39,0.09) 0%, transparent 55%), radial-gradient(ellipse 55% 45% at 85% 20%, rgba(201,162,39,0.09) 0%, transparent 55%)" }} />
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{ background: "radial-gradient(ellipse 80% 65% at 50% 50%, rgba(201,162,39,0.08) 0%, transparent 65%)" }} />
 
       <div className="relative z-10 max-w-[1280px] mx-auto px-5 md:px-8 lg:px-12">
         <div className="reveal flex flex-col items-center text-center">
@@ -264,15 +264,15 @@ function Contact() {
 /* ── FOOTER ──────────────────────────────────────────────── */
 function Footer() {
   return (
-    <footer className="relative bg-[#050505] border-t border-gold/[0.12]" role="contentinfo">
-      <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{ background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(201,162,39,0.10) 0%, transparent 60%), radial-gradient(ellipse 60% 50% at 50% 100%, rgba(201,162,39,0.06) 0%, transparent 55%)" }} />
+    <footer className="relative bg-brand-footer border-t border-gold/[0.20]" role="contentinfo">
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{ background: "radial-gradient(ellipse 70% 50% at 50% 0%, rgba(201,162,39,0.06) 0%, transparent 60%)" }} />
       <div className="relative max-w-[1280px] mx-auto px-5 md:px-8 lg:px-12 py-14 grid gap-12 md:grid-cols-2 lg:grid-cols-3">
         <div>
           <a
             href="#hero"
             className="inline-flex flex-col leading-none mb-2.5"
           >
-            <span className="font-display font-semibold tracking-[0.12em] text-brand-text" style={{ fontSize: "1.5rem" }}>
+            <span className="font-display font-semibold tracking-[0.12em] text-[#F5EFE0]" style={{ fontSize: "1.5rem" }}>
               STEINGLANZ
             </span>
             <span className="font-display font-medium tracking-[0.22em] text-gold" style={{ fontSize: "0.875rem" }}>

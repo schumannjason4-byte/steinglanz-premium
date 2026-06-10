@@ -18,12 +18,12 @@ const config: Config = {
           light: "#D4B24A",
         },
         brand: {
-          DEFAULT: "#0E0B07",
-          alt: "#120F09",
-          footer: "#090703",
-          text: "#F2F2F2",
-          muted: "#909090",
-          subtle: "#5A5A5A",
+          DEFAULT: "#F8F3EA",
+          alt: "#F0E9D6",
+          footer: "#120E06",
+          text: "#1A1208",
+          muted: "#7A6A4F",
+          subtle: "#B09570",
         },
       },
       animation: {

@@ -3,7 +3,7 @@
 import { useEffect } from "react"
 import { X } from "lucide-react"
 
-const inputCls = "w-full bg-[#0C0907] border border-white/[0.10] text-brand-text placeholder:text-brand-subtle px-5 py-4 rounded-xl font-body text-[0.9375rem] transition-all duration-200 focus:outline-none focus:border-gold/60 focus:ring-4 focus:ring-gold/[0.10]"
+const inputCls = "w-full bg-white border border-gold/[0.25] text-brand-text placeholder:text-brand-subtle px-5 py-4 rounded-xl font-body text-[0.9375rem] transition-all duration-200 focus:outline-none focus:border-gold focus:ring-4 focus:ring-gold/[0.12]"
 
 const packageOptions = [
   "Basisreinigung – ab 4 €/m²",
@@ -36,7 +36,7 @@ export function ContactModal({ isOpen, onClose, selectedPackage }: Props) {
     <div className="fixed inset-0 z-[200] flex items-center justify-center p-4" role="dialog" aria-modal="true">
       <div className="absolute inset-0 bg-black/75 backdrop-blur-sm" onClick={onClose} aria-hidden="true" />
 
-      <div className="relative z-10 w-full max-w-[580px] max-h-[90vh] overflow-y-auto bg-[#120F09] border border-white/[0.10] rounded-[20px] p-8 md:p-12 shadow-[0_40px_120px_rgba(0,0,0,0.7)]">
+      <div className="relative z-10 w-full max-w-[580px] max-h-[90vh] overflow-y-auto bg-[#F8F3EA] border border-gold/[0.25] rounded-[20px] p-8 md:p-12 shadow-[0_40px_120px_rgba(0,0,0,0.25)]">
         <button
           onClick={onClose}
           className="absolute top-4 right-4 p-2 text-brand-subtle hover:text-brand-text transition-colors duration-150"

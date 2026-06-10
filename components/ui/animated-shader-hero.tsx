@@ -35,7 +35,7 @@ export function AnimatedShaderHero({ trustBadge, eyebrow, headline, subtitle, bu
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'linear-gradient(to bottom, rgba(4,4,4,0.38) 0%, rgba(4,4,4,0.05) 30%, rgba(4,4,4,0.08) 60%, rgba(4,4,4,0.78) 82%, rgba(4,4,4,0.93) 100%)'
+          background: 'linear-gradient(to bottom, rgba(4,4,4,0.50) 0%, rgba(4,4,4,0.18) 35%, rgba(4,4,4,0.22) 60%, rgba(4,4,4,0.60) 78%, rgba(248,243,234,0.92) 92%, rgba(248,243,234,1.0) 100%)'
         }}
         aria-hidden="true"
       />

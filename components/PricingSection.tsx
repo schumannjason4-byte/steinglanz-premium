@@ -65,7 +65,7 @@ const packages = [
   },
 ]
 
-const CARD_CLASS = "reveal relative flex flex-col backdrop-blur-xl rounded-[18px] p-4 transition-all duration-250 hover:-translate-y-1 min-h-[300px]"
+const CARD_CLASS = "reveal relative flex flex-col rounded-[18px] p-4 transition-all duration-250 hover:-translate-y-1 min-h-[300px] bg-white border border-gold/[0.20] hover:shadow-[0_12px_40px_rgba(201,162,39,0.12)]"
 
 export function PricingSection() {
   const [expanded, setExpanded] = useState(false)
@@ -115,10 +115,10 @@ export function PricingSection() {
                 key={pkg.num}
                 className={`${CARD_CLASS} reveal-d${i + 1} ${
                   isFeatured
-                    ? "bg-gradient-to-br from-gold/[0.06] via-brand to-brand border border-white/[0.08]"
+                    ? "bg-gradient-to-br from-[#FDF6E3] to-white border border-gold/[0.35] shadow-[0_4px_20px_rgba(201,162,39,0.10)]"
                     : i === 1
-                    ? "bg-white/[0.04] border border-gold shadow-[0_0_0_1px_#C9A227] hover:shadow-[0_0_0_1px_#D4B24A,0_16px_40px_rgba(201,162,39,0.12)]"
-                    : "bg-white/[0.04] border border-white/[0.08] hover:shadow-[0_16px_40px_rgba(0,0,0,0.35)]"
+                    ? "border-2 border-gold shadow-[0_4px_20px_rgba(201,162,39,0.15)]"
+                    : "hover:border-gold/40"
                 }`}
               >
                 {(isFeatured || i === 1) && (
@@ -134,7 +134,7 @@ export function PricingSection() {
                   {pkg.badge}
                 </p>
 
-                <div className="flex items-baseline gap-1 pb-3 mb-3 border-b border-white/[0.08]">
+                <div className="flex items-baseline gap-1 pb-3 mb-3 border-b border-gold/[0.15]">
                   <span className="text-brand-subtle text-[0.7rem] mr-0.5">ab</span>
                   <span className={`font-display font-bold text-[2rem] leading-none ${i === 1 ? "text-gold" : "text-brand-text"}`}
                     style={{ fontVariantNumeric: "tabular-nums" }}>
