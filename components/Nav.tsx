@@ -6,7 +6,7 @@ import { Phone } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 export function Nav() {
-  const [scrolled, setScrolled] = useState(false)
+  const [pastHero, setPastHero] = useState(false)
   const [hidden, setHidden] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const lastY = useRef(0)
@@ -14,7 +14,7 @@ export function Nav() {
   useEffect(() => {
     const handle = () => {
       const y = window.scrollY
-      setScrolled(y > 80)
+      setPastHero(y > window.innerHeight * 0.85)
       if (y > lastY.current + 8 && y > 200) setHidden(true)
       else if (y < lastY.current - 4) setHidden(false)
       lastY.current = y
@@ -46,7 +46,8 @@ export function Nav() {
       role="navigation"
       aria-label="Hauptnavigation"
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-250",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+        pastHero && "bg-[#F8F3EA]/95 backdrop-blur-xl border-b border-gold/[0.20]",
         hidden && "-translate-y-full"
       )}
     >
@@ -67,7 +68,7 @@ export function Nav() {
             priority
           />
           <span className="flex flex-col leading-none -ml-4">
-            <span className="font-display font-bold tracking-[0.12em] text-brand-text" style={{ fontSize: "1.5rem" }}>
+            <span className={cn("font-display font-bold tracking-[0.12em] transition-colors duration-300", pastHero ? "text-brand-text" : "text-white")} style={{ fontSize: "1.5rem" }}>
               STEINGLANZ
             </span>
             <span className="font-display font-semibold tracking-[0.22em] text-gold" style={{ fontSize: "0.875rem" }}>
@@ -82,7 +83,7 @@ export function Nav() {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="font-body text-sm font-semibold text-brand-muted hover:text-gold transition-colors duration-150"
+                className={cn("font-body text-sm font-semibold hover:text-gold transition-colors duration-300", pastHero ? "text-brand-muted" : "text-white/85")}
               >
                 {l.label}
               </a>
@@ -111,19 +112,22 @@ export function Nav() {
           <span className="flex flex-col gap-[5px]">
             <span
               className={cn(
-                "block w-6 h-0.5 bg-brand-text rounded transition-transform duration-250",
+                "block w-6 h-0.5 rounded transition-all duration-300",
+                pastHero ? "bg-brand-text" : "bg-white",
                 menuOpen && "translate-y-[7px] rotate-45"
               )}
             />
             <span
               className={cn(
-                "block w-6 h-0.5 bg-brand-text rounded transition-opacity duration-250",
+                "block w-6 h-0.5 rounded transition-all duration-300",
+                pastHero ? "bg-brand-text" : "bg-white",
                 menuOpen && "opacity-0"
               )}
             />
             <span
               className={cn(
-                "block w-6 h-0.5 bg-brand-text rounded transition-transform duration-250",
+                "block w-6 h-0.5 rounded transition-all duration-300",
+                pastHero ? "bg-brand-text" : "bg-white",
                 menuOpen && "-translate-y-[7px] -rotate-45"
               )}
             />

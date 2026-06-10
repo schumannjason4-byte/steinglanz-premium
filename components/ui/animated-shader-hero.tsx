@@ -18,7 +18,7 @@ interface HeroProps {
 function Btn({ config, variant }: { config: ButtonConfig; variant: 'primary' | 'secondary' }) {
   const cls = variant === 'primary'
     ? 'inline-flex items-center gap-2 bg-gold text-brand font-body font-bold text-[0.8125rem] tracking-[0.14em] uppercase px-9 py-4 rounded-full hover:bg-gold-light hover:shadow-[0_0_32px_rgba(201,162,39,0.45)] hover:-translate-y-0.5 transition-all duration-250'
-    : 'inline-flex items-center gap-2 font-body font-semibold text-[0.8125rem] tracking-[0.14em] uppercase px-9 py-4 rounded-full border border-white/20 text-brand-text hover:border-gold/60 hover:text-gold backdrop-blur-sm transition-all duration-250'
+    : 'inline-flex items-center gap-2 font-body font-semibold text-[0.8125rem] tracking-[0.14em] uppercase px-9 py-4 rounded-full border border-white/30 text-white hover:border-gold/60 hover:text-gold backdrop-blur-sm transition-all duration-250'
   if (config.href) return <a href={config.href} className={cls}>{config.text}</a>
   return <button onClick={config.onClick} className={cls}>{config.text}</button>
 }
@@ -67,11 +67,11 @@ export function AnimatedShaderHero({ trustBadge, eyebrow, headline, subtitle, bu
           aria-label={[headline.line1, headline.line2, headline.line3].filter(Boolean).join(' ')}
         >
           <span
-            className="block font-display font-black leading-[0.96] tracking-[-0.02em] text-brand-text animate-fade-in-up animation-delay-200"
+            className="block font-display font-black leading-[0.96] tracking-[-0.02em] text-white animate-fade-in-up animation-delay-200"
             style={{ fontSize: 'clamp(3.5rem, 12vw, 9rem)' }}
           >{headline.line1}</span>
           <span
-            className="block font-display font-black leading-[0.96] tracking-[-0.02em] text-brand-text animate-fade-in-up animation-delay-400"
+            className="block font-display font-black leading-[0.96] tracking-[-0.02em] text-white animate-fade-in-up animation-delay-400"
             style={{ fontSize: 'clamp(3.5rem, 12vw, 9rem)' }}
           >{headline.line2}</span>
           {headline.line3 && (
@@ -94,7 +94,7 @@ export function AnimatedShaderHero({ trustBadge, eyebrow, headline, subtitle, bu
           )}
         </h1>
 
-        <p className="font-body font-medium text-[1rem] text-brand-muted leading-relaxed mb-11 max-w-md animate-fade-in-up animation-delay-600">
+        <p className="font-body font-medium text-[1rem] text-white/75 leading-relaxed mb-11 max-w-md animate-fade-in-up animation-delay-600">
           {subtitle}
         </p>
 
